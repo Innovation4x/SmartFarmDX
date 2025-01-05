@@ -157,7 +157,7 @@ def tds_get():                                           # 수질 측정
     step = 'step 3'
     display_information()
 
-    tds_value = tds_pin.read()                           # 수질 측정
+    tds_value = tds_pin.read()+1                         # 수질 측정
     if tds_value <= 0:                                   # 수질 센서 예외 처리
         tds = -1
         print('수질 감지 센서 오류')
